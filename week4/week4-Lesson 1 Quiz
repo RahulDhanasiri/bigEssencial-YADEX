@@ -1,0 +1,61 @@
+1. Pregunta 1
+What functions must a dataset implement in order to be an RDD?
+
+partitions, iterator and dependencies  - OK
+
+2. Pregunta 2
+Mark all the things that can be used as RDDs.
+In-memory array
+HDFS file
+MySQL table
+A set of CSV files in my home folder
+
+3. Pregunta 3  - OK
+Is it possible to access a MySQL database from within the predicate in the 'filter' transformation?
+
+
+Yes, but one need to create a database handle within the closure and close it upon returning from the predicate.
+
+4. Pregunta 4 - OK
+True or false? Mark only the correct statements about the 'filter' transform.
+
+There is the same number of partitions in the transformed RDD as in the source RDD.
+
+5. Pregunta 5
+True or false? Mark only the incorrect statements.
+
+Spark natively supports only inner joins.
+There is no native join transformation in Spark.
+There is a native join transformation in Spark, and its type signature is: RDD , RDD => RDD .
+
+6. Pregunta 6
+Mark all the transformations with wide dependencies. Try to do this without sneaking into the documentation.
+
+reduceByKey
+cartesian
+distinct
+join
+repartition
+
+7. Pregunta 7
+Imagine you would like to print your dataset on the display. Which code is correct (in Python)?
+
+myRDD.collect().map(print)
+
+8. Pregunta 8
+Imagine you would like to count items in your dataset. Which code is correct (in Python)?
+
+
+
+9. Pregunta 9 - OK
+Consider the following implementation of the 'sample' transformation:
+
+Yes, it exhibits nondeterminism thus making the result non-reproducible.
+
+10. Pregunta 10 - OK
+Consider the following action that updates a counter in a MySQL database:
+
+Are there any issues with the implementation?
+
+
+Yes, the action may produce incorrect results due to non-idempotent updates.

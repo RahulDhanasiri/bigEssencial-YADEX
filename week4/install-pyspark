@@ -1,0 +1,24 @@
+I install pyspark with python,
+after install I get this error:
+
+asusn56@nautilus:~$ pyspark
+Could not find valid SPARK_HOME while searching ['/home', '/usr/local/bin']
+/usr/local/bin/pyspark: línea 24: /bin/load-spark-env.sh: No existe el archivo o el directorio
+/usr/local/bin/pyspark: línea 77: /bin/spark-submit: No existe el archivo o el directorio
+
+for solution use this command:
+
+
+asusn56@nautilus:~$ PYSPARK_PYTHON=python3 SPARK_HOME=/usr/local/lib/python3.6/dist-packages/pyspark pyspark
+
+where
+
+SPARK_HOME is the location where you have install pyspark. For get this path, you typing:
+
+pip show pypspark  and read te info about the path
+
+after that use this path in the command line. :)
+
+Other solution is you set enviroment variable SPARK_HOME permanent en your system .. 
+
+Regards

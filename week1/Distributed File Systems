@@ -1,0 +1,43 @@
+1. Pregunta 1
+What fact is more relevant to the horizontal scaling of the filesystems than to the vertical scaling?
+
+Usage of commodity hardware -  OK
+
+2. The operation 'modify' files is not allowed in distributed FS (GFS, HDFS). What was NOT a reason to do it?
+
+ Increasing reliability and accessibility - OK
+
+3. Pregunta 3
+How to achieve uniform data distribution across the servers in DFS?
+
+ By splitting files into blocks - OK
+
+4. Pregunta 4
+What does a metadata DB contain?
+
+File content -> No seleccionda  .. OK
+
+
+5. Pregunta 5
+Select the correct statement about HDFS:
+
+
+Namenode is a master server, it stores files metadata - OK
+
+6. Pregunta 6
+If you have a very important file, what is the best way to protect it in HDFS?
+
+Both ways are allowed and implemented in HDFS -- OK
+
+7. Pregunta 7
+You were told that two servers in HDFS were down: Datanode and Namenode, your reaction:
+
+ Restore Namenode first - OK
+
+8. Pregunta 8
+What the block size in HDFS does NOT depend on?
+
+NThe block size on the local Datanodes filesystem - OK
+
+
+

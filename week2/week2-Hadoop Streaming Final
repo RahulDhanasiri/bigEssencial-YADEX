@@ -1,0 +1,89 @@
+Hadoop Streaming Final
+
+1. Pregunta 1
+What requirement to a combiner is the most essential?
+
+A combiner should not change a type and format of a key and value - OK
+
+2. Pregunta 2 - OK
+How can a partitioner be implemented and what should be specified in ‘-partitioner’ option in a Hadoop Streaming command?
+
+Only in Java; specify java class in -partitions option - OK
+
+3. Pregunta 3 - OK
+Select the correct statements about a partitioner:  - OK
+
+Depends on a ‘key’ field (i.e. on the field the intermediate data is sorted) or on a subset of the ‘key’ fields
+ Standard ‘KeyFieldBasedPartitioner’ has similar options to the Unix ‘sort’ utility
+
+
+4. Pregunta 4 - OK
+Select the correct statements about a comparator:
+
+
+Standard ‘KeyFieldBasedComparator’ has similar options to the Unix ‘sort’ utility
+
+5. Pregunta 5  - OK
+In what cases should speculative execution (of mapper, for example) be turned off?
+
+
+If the mapper has a side-effect
+
+
+6. Pregunta 6 - OK
+Select the facts about a speculative execution:
+
+
+Can be the reason of a KILLED tasks status
+It can speed up the MapReduce job
+
+
+7. Pregunta 7 - OK
+Select the facts about a compression:
+
+A compression can be specified both for intermediate and for output data
+A compression is a trade-off between CPU utilization, disk usage and ability of archives to be splitted by Hadoop
+Bzip2 format is splittable, i.e. one bzip2 archive can be processed by several mappers in parallel
+
+8. Pregunta 8 - OK
+Select a phase in MapReduce paradigm which processes input records sorted by key:
+
+
+Shuffle & sort
+
+9. Pregunta 9 - OK
+What map and reduce functions should be used (in terms of Unix utilities) to select the only unique input records?
+
+
+map=’uniq’, reduce=’uniq’
+map=’cat’, reduce=’uniq’
+
+10. Pregunta 10 - OK
+What map and reduce functions should be used (in terms of Unix utilities) to select only the repeated input records?
+
+
+map=’cat’, reduce=’uniq -d’
+
+11. Pregunta 11  - OK
+What do you need to define for processing data with Hadoop Streaming on the Reduce phase:
+
+Input records format
+Processor of values with the same key
+
+Aggregation records by key
+
+Output records format
+
+
+12. Pregunta 12 - OK
+What phase of MapReduce is more suitable for this code?
+
+Map
+
+13. Pregunta 13 - OK
+What is the Distributed Cache in Hadoop used for?
+
+
+To deliver the required files to the nodes
+
+

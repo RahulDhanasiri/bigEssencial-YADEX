@@ -1,0 +1,75 @@
+Hadoop MapReduce Intro
+
+1. Pregunta 1
+Select the type of failure when a server in a cluster gets out of service because of the HDD damages
+
+Fail-Stop - OK
+
+2. Pregunta 2
+Select the type of failure when a server in a cluster reboots because of a momentary power failure
+
+Fail-Recovery  - OK
+
+3. Pregunta 3
+Select the type of failure when a server in a cluster outputs unexpected results of the calculations
+
+Byzantine failure - OK 
+
+4. Pregunta 4
+Select the type of failure when some packets are lost regardless the contents of the message
+
+Fair-Loss Link - OK
+
+5. Pregunta 5
+Select the type of failure when some packets are modified during the transmission
+
+
+Byzantine Link - OK
+
+
+6. Pregunta 6
+Select a mechanism for capturing events in chronological order in the distributed system
+
+Both ways are possible, logical clocks hide inaccuracies of clocks synchronization - OK
+
+
+7. Pregunta 7
+Select the failure types specific for distributed computing, for example for Hadoop stack products
+
+Fail-Recovery, Fair-Loss Link and Asynchronous model - OK
+
+8. Pregunta 8
+What phase in MapReduce paradigm is better to filtering input records without any additional processing?
+
+MAP ----> Shuffle & sort - 
+
+9. Pregunta 9
+Select the associative functions:
+
+Map
+
+10. Pregunta 10
+What map and reduce functions should be used (in terms of Unix utilities) to select the only unique input records?
+
+map=’cat’, reduce=’uniq’  - OK
+map=’uniq’, reduce=’uniq’
+
+11. Pregunta 11
+What map and reduce functions should be used (in terms of Unix utilities) to select only the repeated input records?
+
+map=’cat’, reduce=’uniq -d’  - OK
+map=’cat’, reduce=’uniq -d’
+
+
+12. Pregunta 12
+What service in Hadoop MapReduce v1 is responsible for running map and reduce tasks:
+
+
+JobTracker - OK
+
+13. Pregunta 13
+In YARN Resource Manager is...
+
+A service which processes requests for cluster resources
+
+

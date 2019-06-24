@@ -1,0 +1,31 @@
+Real-World Applications
+
+1. Pregunta 1 - OK
+There are two datasets: A is the large one, B is small enough to fit in the memory of the cluster node. What type of join do you choose to make the difference A\B (records from A not found in B)?
+
+- Map
+
+2. Pregunta 2 - OK
+There are two datasets: A is the large one, B is small enough to fit in the memory of the cluster node. What type of join do you choose to make the difference B\A (records from B not found in A)?
+
+- Reduce
+
+3. Pregunta 3 - OK
+How do you distinguish records of two datasets on the Reduce phase?
+
+By a some tag added to the records on the Map phase; tags are selected by the filename from the environment
+
+By format of the values
+
+4. Pregunta 4
+When is Secondary Sort really useful?
+
+When you want to avoid containers in memory on the reducers and therefore decrease the memory required by your tasks.
+
+
+When you join two datasets with a Reduce-side join and one of them has many records with repeating keys
+
+5. Pregunta 5
+In what type of join could this script be used?
+
+Reduce

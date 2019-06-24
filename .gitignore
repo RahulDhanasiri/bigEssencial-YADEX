@@ -1,0 +1,8 @@
+.ipynb_checkpoints
+.ipython
+.local
+.oracle_jre_usage
+.viminfo
+.bash_history
+supervisor.pid
+supervisord.log

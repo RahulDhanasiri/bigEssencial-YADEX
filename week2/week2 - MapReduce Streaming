@@ -1,0 +1,78 @@
+MapReduce Streaming
+
+1. Pregunta 1
+What do you need to define for processing data with Hadoop Streaming on the Map phase:
+
+Output records format
+Input records format
+Input record processor
+
+2. Pregunta 2
+What you have to define for processing data with Hadoop Streaming on the Reduce phase:
+
+Aggregation records by key
+Input records format
+Processor of values with the same key
+Output records format
+
+3. Pregunta 3
+In Hadoop Streaming a mapper is run on:
+
+Stream of input records  - OK
+
+4. Pregunta 4
+In Hadoop Streaming a reducer is run on:
+
+On records with the same key -  Each input record
+
+5. Pregunta 5
+What phase of MapReduce is this code more suitable for? 
+
+Reduce - OK
+
+6. Pregunta 6
+What phase of MapReduce is this code more suitable for?
+
+Map - OK
+
+7. Pregunta 7
+What function is implemented in the following mapper:
+
+tr - OK	
+
+8. Pregunta 8
+What function is implemented in the following reducer:
+
+ uniq -- OK
+
+9. Pregunta 9
+How can the Reduce phase in Hadoop Streaming be omitted?
+
+Use a trivial reducer, i.e. cat utility -- Don’t specify a ‘-reducer’ parameter
+
+10. Pregunta 10
+What is a Distributed Cache in Hadoop used for?
+
+To deliver the required files to the nodes  - OK
+
+11. Pregunta 11
+You have the WordCount program for Hadoop, it outputs the result in the format:
+
+word count
+
+And now you want to count the total number of unique words in the text. What changes do you need to make?
+
+ Use Hadoop counters from the existing job - OK
+
+12. Pregunta 12
+How do you pass any parameter into your Hadoop Streaming mapper script?
+
+Both methods are possible - OK
+
+13. Pregunta 13
+How do you output some debug messages for you MapReduce scripts?
+
+Both methods are possible - OK
+
+
+

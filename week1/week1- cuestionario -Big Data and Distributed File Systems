@@ -1,0 +1,85 @@
+1. Pregunta 1
+What does relational data model consist of?
+
+Tables, rows, columns and values
+
+2. Pregunta 2
+Imagine that in your application you need to associate various data with users, i.e. their preferences, behavioural information and so on. You are willing to persist user profiles on the disk. Given the choice between CSV and JSON, which format would you choose?
+
+JSON, obviously
+
+3. Pregunta 3
+Why are columnar file formats used in data warehousing? Mark all the correct answers.
+
+Columnar stores occupy less disk space due to compression.
+
+
+Columnar stores allow more efficient slicing of data (both horizontal and vertical).
+
+Columnar stores allow efficient per-record operations like point updates.
+
+4. Pregunta 4
+Compared to text formats, why is the SequenceFile format faster? Mark all the correct statements.
+
+Simplified grammar (not tracking paired quotes, brackets, and so on) leads to a streamlined, unconditional code.
+
+
+Serialized data occupies less disk space thus saving I/O time.
+
+
+
+5. Pregunta 5
+True or False? Optimizing the computation itself (optimizing the computation time) will not help to reduce the completion time of an I/O-bound process.
+
+T
+
+
+6. Pregunta 6
+True or False? Switching from compressed to uncompressed data for a CPU-bound process may increase the completion time despite the saved CPU time.
+
+T
+
+7. Pregunta 7
+What fact is more relevant to the horizontal scaling of the filesystems than to the vertical scaling?
+
+It provides a lower latency than the other type of scaling
+
+8. Pregunta 8
+The operation 'modify' files is not allowed in distributed FS (GFS, HDFS). What was NOT a reason to do it?
+
+The data usage pattern ‘write once, read many’
+
+9. Pregunta 9
+How to achieve uniform data distribution across the servers in DFS?
+
+By forbidding the operation 'modify' files
+
+10. Pregunta 10
+What does a metadata DB contain?
+
+File permissions
+File creation time
+Location on the file blocks
+
+
+
+
+11. Pregunta 11
+Select the correct statement about HDFS:
+
+Namenode is a master server, it stores files metadata
+
+12. Pregunta 12
+If you have a very important file, what is the best way to protect it in HDFS?
+
+Both ways are allowed and implemented in HDFS
+
+13. Pregunta 13
+You were told that two servers in HDFS were down: Datanode and Namenode, your reaction:
+
+It’s OK, replication factor is 3
+
+14. Pregunta 14
+What the block size in HDFS does NOT depend on?
+
+Namenode RAM

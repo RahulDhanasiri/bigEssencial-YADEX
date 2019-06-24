@@ -1,0 +1,81 @@
+Advanced MapReduce Techniques
+
+
+1. Pregunta 1 - OK
+There are two datasets: A is the large one, B is small enough to fit in the memory of the cluster node. What type of join do you choose to make their intersection A&B?
+
+Records in A: keyA, valueA
+
+Records in B: keyB, valueB
+
+Records in the result:
+
+key (=keyA=keyB), valueA, valueB
+
+
+
+- Map
+
+2. Pregunta 2 - OK
+There are two datasets: A is the large one, B is small enough to fit in the memory of the cluster node. What type of join do you choose to make the difference A\B (records from A not found in B)?
+A: keyA, valueA
+
+B: keyB, valueB
+
+Result:
+
+keyA, valueA, null
+
+- Map
+
+
+3. Pregunta 3  - OK
+There are two datasets: A is the large one, B is small enough to fit in the memory of the cluster node. What type of join do you choose to make the difference B\A (records from B not found in A)?
+
+Reduce
+
+4. Pregunta 4 - OK
+There are two datasets: A is the large one, B is small enough to fit in the memory of the cluster node. What type of join do you choose to make the union A U B (records from A or from B or from the both datasets)?
+
+Reduce
+
+5. How do you distinguish records of two datasets on the Reduce phase?  - OK
+
+
+By a some tag added to the records on the Map phase; tags are selected by the filename from the environment
+
+By format of the values
+
+
+
+6. Pregunta 6  - OK
+What parameters do you specify in the Hadoop Streaming command to perform Secondary sort (i.e. sort by two fields of the key, partition by the first field)?
+
+-D stream.num.map.output.key.fields=2
+-D mapred.text.key.comparator.options=-k1,2
+-D mapred.output.key.comparator.class=org.apache.hadoop.mapred.lib.KeyFieldBasedComparator
+-D mapred.text.key.partitioner.options=-k1,1
+-partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner
+
+
+7. Pregunta 7  - OK
+When is Secondary Sort really useful?
+
+
+When you want to avoid containers in memory on the reducers and therefore decrease the memory required by your tasks.
+
+When you want to avoid containers in memory on the reducers and therefore decrease the memory required by your tasks.
+
+When you join two datasets with a Reduce-side join and one of them has many records with repeating keys
+
+
+
+8. Pregunta 8 -OK
+In what type of join could this code be used?
+
+Map
+
+9. Pregunta 9 - OK
+In what type of join could this script be used?
+
+Reduce
